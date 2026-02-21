@@ -45,8 +45,8 @@ importers:
         specifier: ^3.5.25
         version: 3.5.28(typescript@5.9.3)
       vue-router:
-        specifier: ^4.6.4
-        version: 4.6.4(vue@3.5.28(typescript@5.9.3))
+        specifier: ^5.0.0
+        version: 5.0.3(@vue/compiler-sfc@3.5.28)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.28(typescript@5.9.3)))(vue@3.5.28(typescript@5.9.3))
     devDependencies:
       '@nuxtjs/i18n':
         specifier: ^10.2.1
@@ -318,14 +318,6 @@ packages:
 
   '@babel/traverse@7.29.0':
     resolution: {integrity: sha512-4HPiQr0X7+waHfyXPZpWPfWL/J7dcN1mx9gL6WdQVMbPnF3+ZhSMs8tCxN7oHddJE9fhNE7+lxdnlyemKfJRuA==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/types@7.28.5':
-    resolution: {integrity: sha512-qQ5m48eI/MFLQ5PxQj4PFaprjyCTLI37ElWMmNs0K8Lk3dVeOdNpB3ks8jc7yM5CDmVC73eMVk/trk3fgmrUpA==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/types@7.28.6':
-    resolution: {integrity: sha512-0ZrskXVEHSWIqZM/sQZ4EV3jZJXRkio/WCxaqKZP1g//CEWEPSfeZFcms4XeKBCHU0ZKnIkdJeU/kF+eRp5lBg==}
     engines: {node: '>=6.9.0'}
 
   '@babel/types@7.29.0':
@@ -2930,6 +2922,9 @@ packages:
 
   '@vue/devtools-api@7.7.9':
     resolution: {integrity: sha512-kIE8wvwlcZ6TJTbNeU2HQNtaxLx3a84aotTITUuL/4bzfPxzajGBOoqjMhwZJ8L9qFYDU/lAYMEEm11dnZOD6g==}
+
+  '@vue/devtools-api@8.0.6':
+    resolution: {integrity: sha512-+lGBI+WTvJmnU2FZqHhEB8J1DXcvNlDeEalz77iYgOdY1jTj1ipSBaKj3sRhYcy+kqA8v/BSuvOz1XJucfQmUA==}
 
   '@vue/devtools-core@8.0.6':
     resolution: {integrity: sha512-fN7iVtpSQQdtMORWwVZ1JiIAKriinhD+lCHqPw9Rr252ae2TczILEmW0zcAZifPW8HfYcbFkn+h7Wv6kQQCayw==}
@@ -6879,6 +6874,21 @@ packages:
     peerDependencies:
       vue: ^3.5.0
 
+  vue-router@5.0.3:
+    resolution: {integrity: sha512-nG1c7aAFac7NYj8Hluo68WyWfc41xkEjaR0ViLHCa3oDvTQ/nIuLJlXJX1NUPw/DXzx/8+OKMng045HHQKQKWw==}
+    peerDependencies:
+      '@pinia/colada': '>=0.21.2'
+      '@vue/compiler-sfc': ^3.5.17
+      pinia: ^3.0.4
+      vue: ^3.5.0
+    peerDependenciesMeta:
+      '@pinia/colada':
+        optional: true
+      '@vue/compiler-sfc':
+        optional: true
+      pinia:
+        optional: true
+
   vue@3.5.28:
     resolution: {integrity: sha512-BRdrNfeoccSoIZeIhyPBfvWSLFP4q8J3u8Ju8Ug5vu3LdD+yTM13Sg4sKtljxozbnuMu1NB1X5HBHRYUzFocKg==}
     peerDependencies:
@@ -7350,7 +7360,7 @@ snapshots:
 
   '@babel/parser@7.27.7':
     dependencies:
-      '@babel/types': 7.28.6
+      '@babel/types': 7.29.0
 
   '@babel/parser@7.29.0':
     dependencies:
@@ -7381,15 +7391,15 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.28.6
       '@babel/parser': 7.29.0
-      '@babel/types': 7.28.6
+      '@babel/types': 7.29.0
 
   '@babel/traverse@7.27.7':
     dependencies:
       '@babel/code-frame': 7.28.6
       '@babel/generator': 7.29.1
-      '@babel/parser': 7.27.7
+      '@babel/parser': 7.29.0
       '@babel/template': 7.28.6
-      '@babel/types': 7.28.6
+      '@babel/types': 7.29.0
       debug: 4.4.3
       globals: 11.12.0
     transitivePeerDependencies:
@@ -7406,16 +7416,6 @@ snapshots:
       debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
-
-  '@babel/types@7.28.5':
-    dependencies:
-      '@babel/helper-string-parser': 7.27.1
-      '@babel/helper-validator-identifier': 7.28.5
-
-  '@babel/types@7.28.6':
-    dependencies:
-      '@babel/helper-string-parser': 7.27.1
-      '@babel/helper-validator-identifier': 7.28.5
 
   '@babel/types@7.29.0':
     dependencies:
@@ -10528,6 +10528,10 @@ snapshots:
     dependencies:
       '@vue/devtools-kit': 7.7.9
 
+  '@vue/devtools-api@8.0.6':
+    dependencies:
+      '@vue/devtools-kit': 8.0.6
+
   '@vue/devtools-core@8.0.6(vite@7.3.1(@types/node@24.10.13)(jiti@2.6.1)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(vue@3.5.28(typescript@5.9.3))':
     dependencies:
       '@vue/devtools-kit': 8.0.6
@@ -10885,7 +10889,7 @@ snapshots:
 
   babel-walk@3.0.0-canary-5:
     dependencies:
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
 
   bail@2.0.2: {}
 
@@ -11146,7 +11150,7 @@ snapshots:
   constantinople@4.0.1:
     dependencies:
       '@babel/parser': 7.29.0
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
 
   convert-source-map@2.0.0: {}
 
@@ -15063,6 +15067,30 @@ snapshots:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.28(typescript@5.9.3)
 
+  vue-router@5.0.3(@vue/compiler-sfc@3.5.28)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.28(typescript@5.9.3)))(vue@3.5.28(typescript@5.9.3)):
+    dependencies:
+      '@babel/generator': 7.29.1
+      '@vue-macros/common': 3.1.2(vue@3.5.28(typescript@5.9.3))
+      '@vue/devtools-api': 8.0.6
+      ast-walker-scope: 0.8.3
+      chokidar: 5.0.0
+      json5: 2.2.3
+      local-pkg: 1.1.2
+      magic-string: 0.30.21
+      mlly: 1.8.0
+      muggle-string: 0.4.1
+      pathe: 2.0.3
+      picomatch: 4.0.3
+      scule: 1.3.0
+      tinyglobby: 0.2.15
+      unplugin: 3.0.0
+      unplugin-utils: 0.3.1
+      vue: 3.5.28(typescript@5.9.3)
+      yaml: 2.8.2
+    optionalDependencies:
+      '@vue/compiler-sfc': 3.5.28
+      pinia: 3.0.4(typescript@5.9.3)(vue@3.5.28(typescript@5.9.3))
+
   vue@3.5.28(typescript@5.9.3):
     dependencies:
       '@vue/compiler-dom': 3.5.28
@@ -15160,7 +15188,7 @@ snapshots:
   with@7.0.2:
     dependencies:
       '@babel/parser': 7.29.0
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
       assert-never: 1.4.0
       babel-walk: 3.0.0-canary-5
 
