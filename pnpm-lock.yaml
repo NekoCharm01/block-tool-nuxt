@@ -21,8 +21,8 @@ importers:
         specifier: ^0.1.0
         version: 0.1.2
       '@netlify/nuxt':
-        specifier: 0.2.26
-        version: 0.2.26(@azure/identity@4.13.0)(db0@0.3.4(drizzle-orm@1.0.0-beta.15-859cf75(@cloudflare/workers-types@4.20250826.0)(@neondatabase/serverless@1.0.2)(@opentelemetry/api@1.9.0)(@types/mssql@9.1.8(@azure/core-client@1.10.1))(@types/pg@8.16.0)(mssql@11.0.1(@azure/core-client@1.10.1))(zod@4.3.6)))(ioredis@5.9.3)(magicast@0.5.2)(rollup@4.58.0)
+        specifier: 0.2.27
+        version: 0.2.27(@azure/identity@4.13.0)(db0@0.3.4(drizzle-orm@1.0.0-beta.15-859cf75(@cloudflare/workers-types@4.20250826.0)(@neondatabase/serverless@1.0.2)(@opentelemetry/api@1.9.0)(@types/mssql@9.1.8(@azure/core-client@1.10.1))(@types/pg@8.16.0)(mssql@11.0.1(@azure/core-client@1.10.1))(zod@4.3.6)))(ioredis@5.9.3)(magicast@0.5.2)(rollup@4.58.0)
       check-password-strength:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1434,10 +1434,6 @@ packages:
     resolution: {integrity: sha512-ZSDSR5RuV9qkW4L2uwKvwDdSGBqef2NyLGsrdoEx0Yj7ulSWjPSTVCrl+uY23lgaEsoCVj+dSbN9yC+uXw7dJw==}
     engines: {node: '>=20.6.1'}
 
-  '@netlify/api@14.0.14':
-    resolution: {integrity: sha512-/YwcFbI0RsKXof+e+f48pVqmELzkGWOrhqZuL5xCUNdHYhvUd9El0jQDv7fBjdhxHSrflnZfXFUW56xaI69k4A==}
-    engines: {node: '>=18.14.0'}
-
   '@netlify/api@14.0.17':
     resolution: {integrity: sha512-96C0og8NfSotKvLyfFH2a0LBKWH5nseEnSq2TsRDgpUlrzQKYylbva9J+B7CtNZ/DfKgR/k0AncbEXtRvDuaLg==}
     engines: {node: '>=18.14.0'}
@@ -1462,8 +1458,8 @@ packages:
     resolution: {integrity: sha512-qziF8R9kf7mRNgSpmUH96O0aV1ZiwK4c9ZecFQbDSQuYhgy9GY1WTjiQF0oQnohjTjWNtXhrU39LAeXWNLaBJg==}
     engines: {node: ^18.14.0 || >=20}
 
-  '@netlify/dev@4.12.0':
-    resolution: {integrity: sha512-J2T6oN0VISh2pakPb1A+Sc+uH+2sLk/oJdUl0JiyZtz8mrG27cktz9s/s5Nlr3C0ZKhHPFnalVVS/IE171tG/g==}
+  '@netlify/dev@4.12.1':
+    resolution: {integrity: sha512-CjI7ig6/T4VbgBO/ohDDoXw5atutRXEHBpaUBDNqiWN+6phT8AVKasTwxQxtZzadH0yWGjXsHJYfjEoVpgd2og==}
     engines: {node: '>=20.6.1'}
     peerDependencies:
       '@netlify/db-dev': 0.2.0
@@ -1509,13 +1505,9 @@ packages:
   '@netlify/neon@0.1.2':
     resolution: {integrity: sha512-F8+Dnu+nvGZruskblFwTopv/CUbHi2VOP4bJpDhRo85UFawZ/wMPmxnWQ0CLYwdAERU1OYoQyXOQM19HxAHjQQ==}
 
-  '@netlify/nuxt@0.2.26':
-    resolution: {integrity: sha512-XoceEHR4u0EoH0x+T18QGtGlQGprtmo/tsx3MqWF3wbIqK4BoEt4lcAqyBFv6aNwLVPLJVgjmRgjXCrK2uYLnQ==}
+  '@netlify/nuxt@0.2.27':
+    resolution: {integrity: sha512-sPkDbryBhmZoAcD4tDYnog3H7RDnnS27Hdlt90h53bPc0Tu004kb/++YsuFnFmfzLygCVdBKZmMOavszRKr62w==}
     engines: {node: ^20.19.0 || >=22.12.0}
-
-  '@netlify/open-api@2.49.1':
-    resolution: {integrity: sha512-4jFX59dqSBJIlFK/qXrEmWsMDHBErS9cFSFweWmPFKRNCuIVlkeibQrRQcVtqKfek3al1UuXscVVIZEYM05LMA==}
-    engines: {node: '>=14.8.0'}
 
   '@netlify/open-api@2.50.0':
     resolution: {integrity: sha512-nvtP3GQqAg2fDCzZIz/PNIjgdQcbKRqJlRRQquRfBTP3DJi4254fMApWvBoj6+v07eowy2/t9xXHu+KRPw6iKw==}
@@ -8874,13 +8866,6 @@ snapshots:
     dependencies:
       '@netlify/api': 14.0.17
 
-  '@netlify/api@14.0.14':
-    dependencies:
-      '@netlify/open-api': 2.49.1
-      node-fetch: 3.3.2
-      p-wait-for: 5.0.2
-      picoquery: 2.5.0
-
   '@netlify/api@14.0.17':
     dependencies:
       '@netlify/open-api': 2.50.0
@@ -8905,7 +8890,7 @@ snapshots:
   '@netlify/config@24.4.0':
     dependencies:
       '@iarna/toml': 2.2.5
-      '@netlify/api': 14.0.14
+      '@netlify/api': 14.0.17
       '@netlify/headers-parser': 9.0.2
       '@netlify/redirect-parser': 15.0.3
       chalk: 5.6.2
@@ -8948,7 +8933,7 @@ snapshots:
       uuid: 13.0.0
       write-file-atomic: 5.0.1
 
-  '@netlify/dev@4.12.0(@azure/identity@4.13.0)(db0@0.3.4(drizzle-orm@1.0.0-beta.15-859cf75(@cloudflare/workers-types@4.20250826.0)(@neondatabase/serverless@1.0.2)(@opentelemetry/api@1.9.0)(@types/mssql@9.1.8(@azure/core-client@1.10.1))(@types/pg@8.16.0)(mssql@11.0.1(@azure/core-client@1.10.1))(zod@4.3.6)))(ioredis@5.9.3)(rollup@4.58.0)':
+  '@netlify/dev@4.12.1(@azure/identity@4.13.0)(db0@0.3.4(drizzle-orm@1.0.0-beta.15-859cf75(@cloudflare/workers-types@4.20250826.0)(@neondatabase/serverless@1.0.2)(@opentelemetry/api@1.9.0)(@types/mssql@9.1.8(@azure/core-client@1.10.1))(@types/pg@8.16.0)(mssql@11.0.1(@azure/core-client@1.10.1))(zod@4.3.6)))(ioredis@5.9.3)(rollup@4.58.0)':
     dependencies:
       '@netlify/ai': 0.4.0
       '@netlify/blobs': 10.7.0
@@ -9095,9 +9080,9 @@ snapshots:
     dependencies:
       '@neondatabase/serverless': 1.0.2
 
-  '@netlify/nuxt@0.2.26(@azure/identity@4.13.0)(db0@0.3.4(drizzle-orm@1.0.0-beta.15-859cf75(@cloudflare/workers-types@4.20250826.0)(@neondatabase/serverless@1.0.2)(@opentelemetry/api@1.9.0)(@types/mssql@9.1.8(@azure/core-client@1.10.1))(@types/pg@8.16.0)(mssql@11.0.1(@azure/core-client@1.10.1))(zod@4.3.6)))(ioredis@5.9.3)(magicast@0.5.2)(rollup@4.58.0)':
+  '@netlify/nuxt@0.2.27(@azure/identity@4.13.0)(db0@0.3.4(drizzle-orm@1.0.0-beta.15-859cf75(@cloudflare/workers-types@4.20250826.0)(@neondatabase/serverless@1.0.2)(@opentelemetry/api@1.9.0)(@types/mssql@9.1.8(@azure/core-client@1.10.1))(@types/pg@8.16.0)(mssql@11.0.1(@azure/core-client@1.10.1))(zod@4.3.6)))(ioredis@5.9.3)(magicast@0.5.2)(rollup@4.58.0)':
     dependencies:
-      '@netlify/dev': 4.12.0(@azure/identity@4.13.0)(db0@0.3.4(drizzle-orm@1.0.0-beta.15-859cf75(@cloudflare/workers-types@4.20250826.0)(@neondatabase/serverless@1.0.2)(@opentelemetry/api@1.9.0)(@types/mssql@9.1.8(@azure/core-client@1.10.1))(@types/pg@8.16.0)(mssql@11.0.1(@azure/core-client@1.10.1))(zod@4.3.6)))(ioredis@5.9.3)(rollup@4.58.0)
+      '@netlify/dev': 4.12.1(@azure/identity@4.13.0)(db0@0.3.4(drizzle-orm@1.0.0-beta.15-859cf75(@cloudflare/workers-types@4.20250826.0)(@neondatabase/serverless@1.0.2)(@opentelemetry/api@1.9.0)(@types/mssql@9.1.8(@azure/core-client@1.10.1))(@types/pg@8.16.0)(mssql@11.0.1(@azure/core-client@1.10.1))(zod@4.3.6)))(ioredis@5.9.3)(rollup@4.58.0)
       '@netlify/dev-utils': 4.3.3
       '@nuxt/kit': 4.3.1(magicast@0.5.2)
       h3: 1.15.5
@@ -9127,8 +9112,6 @@ snapshots:
       - rollup
       - supports-color
       - uploadthing
-
-  '@netlify/open-api@2.49.1': {}
 
   '@netlify/open-api@2.50.0': {}
 
